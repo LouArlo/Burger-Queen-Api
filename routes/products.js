@@ -1,20 +1,22 @@
 const express = require('express')
-const controller = require('../controllers/products')
-const router = express.Router()
+const controller = require('../controllers/products');
+const router = express.Router();
 
-const path = 'products'
+const path = 'products';
 
-// Ruta /products 
+// endpoints users
 
-router.get(
-    `/${path}`,
-     controller.getData
-     )
+router.get(`/${path}`, controller.getData);
 
-     /* app.post('/products', (req, res) => {
-        res.status(200).json({'response': 'data recibida',
-        "data":req.body
-    })
-    }) */
+router.post(`/${path}`, controller.insertData);
 
+router.get(`/${path}/:id`, controller.getDataId);
+
+router.put(`/${path}/:id`, controller.putDataId);
+
+router.delete(`/${path}/:id`, controller.deleteDataId);
+/* router.get(`/${path}`, controller.getSingle);
+
+router.post(`/${path}`, controller.updateSingle);
+ */
 module.exports = router
