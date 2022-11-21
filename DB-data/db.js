@@ -1,10 +1,9 @@
+require("dotenv").config();
 //const { connect } = require('http')
 const mongoose = require('mongoose')
 
-console.log(process.env.DB_URL)
 
-//const DB_URI = 'mongodb://localhost:27017/db_prueba'
-//const DB_URI = ''
+//console.log(process.env.DB_URL)
 
 module.exports = () => {
 
