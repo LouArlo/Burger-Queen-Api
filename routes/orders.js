@@ -4,12 +4,17 @@ const router = express.Router()
 
 const path = 'orders'
 
-// Ruta /orders
+// endpoints orders
 
-router.get(
-    `/${path}`,
-     controller.getData
-     )
+router.get(`/${path}`, controller.getData);
+
+router.post(`/${path}`, controller.insertData);
+
+router.get(`/${path}/:id`, controller.getDataId);
+
+router.put(`/${path}/:id`, controller.putDataId);
+
+router.delete(`/${path}/:id`, controller.deleteDataId);
 
 
 
