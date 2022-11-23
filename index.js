@@ -14,7 +14,6 @@ const authRouters = require("./routes/auth");
 const productsRouters = require("./routes/products");
 const ordersRouters = require("./routes/orders");
 const usersRouters = require("./routes/users");
-//const uploadRouters  = require("./controllers/upload");
 
 
 
@@ -39,7 +38,7 @@ app.use(authRouters);
 app.use(productsRouters);
 app.use(ordersRouters);
 app.use(usersRouters);
-//app.use(uploadRouters);
+
 
 
 app.get('/', (req, res) => {
