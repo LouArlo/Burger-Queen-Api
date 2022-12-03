@@ -70,6 +70,16 @@ exports.putDataId = (':id', (req, res) => {
  .then((data) => res.json(data))
  .catch((error) => res.json({ message: error}));
 }); 
+
+exports.deleteDataId = (':id', (req, res) => {
+  const { id } = req.params;
+   UsersScheme
+  .deleteOne ({ _id: id })
+  .then((data) => res.json(data))
+  .catch((error) => res.json({ message: error})
+  )
+});  
+
 // esto es para ver que los datos enviados se estan recibiendo, pero no ha funcionado
 
 /* router.post('/users', (req,res) => {

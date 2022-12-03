@@ -1,3 +1,5 @@
 node_modules
 .env
 CDMX013-burger-queen-api
+package-lock.json
+package.json
