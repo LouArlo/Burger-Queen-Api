@@ -1,7 +1,6 @@
 const express = require("express");
 const controller = require("../controllers/users");
 const router = express.Router();
-//const UsersScheme = require("../models/users");
 
 const path = "users";
 
@@ -17,9 +16,5 @@ router.put(`/${path}/:id`, controller.putDataId);
 
 router.delete(`/${path}/:id`, controller.deleteDataId);
 
-/* router.get(`/${path}`, controller.getSingle);
-
-router.post(`/${path}`, controller.updateSingle);
- */
 
 module.exports = router;

@@ -41,7 +41,7 @@ exports.getDataId = (':id', (req, res) => {
   .catch((error) => res.json({ message: error})
   )
 });  
-
+// delete data
 exports.deleteDataId = (':id', (req, res) => {
   const { id } = req.params;
    OrdersScheme

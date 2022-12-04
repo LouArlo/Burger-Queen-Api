@@ -27,17 +27,6 @@ const options = {
   });
 }; */
 
-//GET SINGLE DATA
-/* exports.getSingle = (req, res) => {
-
-}
-
-//UPDATE SINGLE  DATA
-exports.updateSingle = (req, res) => {
-    
-} */
-// DELETE DATA
-
 //OTHER METHOD TO INSERT DATA
  exports.insertData =  (req, res) => {
     const user= UsersScheme(req.body);
@@ -47,6 +36,7 @@ exports.updateSingle = (req, res) => {
    .catch((error) => res.json({ message: error}));
 }; 
 
+//GET SINGLE DATA
 exports.getData =  (req, res) => {
   UsersScheme
   .find()
@@ -54,6 +44,7 @@ exports.getData =  (req, res) => {
  .catch((error) => res.json({ message: error}));
 }; 
 
+//UPDATE SINGLE  DATA
 exports.getDataId = (':id', (req, res) => {
   const { id } = req.params;
   UsersScheme
@@ -70,6 +61,8 @@ exports.putDataId = (':id', (req, res) => {
  .then((data) => res.json(data))
  .catch((error) => res.json({ message: error}));
 }); 
+
+// DELETE DATA
 
 exports.deleteDataId = (':id', (req, res) => {
   const { id } = req.params;

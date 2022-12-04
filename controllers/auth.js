@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const secretKey = process.env.SECRET;
 
 
-
+// validate user
  exports.postValidate = (':email', (req, res) => {
    
     const { email } = req.params;
@@ -20,7 +20,7 @@ const secretKey = process.env.SECRET;
             res.json({message:error})
             });
  });
-
+// create token
  exports.postCreateToken = (':email:password', (req, res) => {
     const { email, password } = req.params;
     const user = {
@@ -31,14 +31,7 @@ const secretKey = process.env.SECRET;
          }) 
     })          
 
-    /* if (userFinded==true) {
-            jwt.sign({user}, secretKey, (err, token) => {
-           res.json({ token })
-           }) 
-    } else {
-        res.send("usuario no registrado")
-
-    } */
+    
     
 
 

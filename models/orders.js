@@ -5,7 +5,7 @@ const OrdersScheme = new mongoose.Schema(
     {
         client: {
             type: String
-        },
+                },
         productOrder:{ 
             type: Array ({
                
