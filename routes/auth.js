@@ -8,8 +8,8 @@ const path = 'auth';
 // Ruta /auth
 
 //router.post(`/${path}/:email`, controller.postValidate);
-
-router.post(`/${path}/token/:email/:password`, controller.postCreateToken);
+router.post(`/${path}/`, controller.postCreateToken);
+//router.post(`/${path}/token/:email/:password`, controller.postCreateToken);
 /* app.listen(port, () => {
     console.log(`Aplicación activa ${port}`)
   }) */

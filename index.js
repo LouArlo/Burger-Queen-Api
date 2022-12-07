@@ -16,6 +16,13 @@ const productsRouters = require("./routes/products");
 const ordersRouters = require("./routes/orders");
 const usersRouters = require("./routes/users");
 
+// cors
+// This should already be declared in your API file
+//import app = express();
+
+// ADD THIS
+const cors = require('cors');
+app.use(cors());
 
 
 //for parsing json
